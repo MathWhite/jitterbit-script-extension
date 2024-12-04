@@ -2,6 +2,7 @@
   "name": "jitterbit-script",
   "displayName": "Jitterbit Script",
   "description": "",
+  "publisher": "bakebell",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.95.0"

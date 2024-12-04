@@ -1,0 +1,12 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "npm: watch",
+        "type": "npm",
+        "script": "watch", // This depends on the script defined in your package.json
+        "problemMatcher": []
+      }
+    ]
+  }
+  

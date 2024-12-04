@@ -1,0 +1,835 @@
+{
+  "WriteToOperationLog Example": {
+    "prefix": "wto",
+    "body": [
+      "WriteToOperationLog(\"${1:message}\");"
+    ],
+    "description": "Insere a função WriteToOperationLog com mensagem"
+  },
+  "WriteToOperationLog Complete": {
+    "prefix": "write",
+    "body": [
+      "WriteToOperationLog(\"${1:message}\");"
+    ],
+    "description": "Insere a função WriteToOperationLog com mensagem"
+  },
+  "init-project": {
+    "prefix": "init",
+    "body": [
+      "<trans>",
+      "",
+      "</trans>"
+    ],
+    "description": "Inicializa o projeto com a tag trans"
+  },
+  "Cache ReadCache function": {
+    "prefix": "readCache",
+    "body": [
+      "ReadCache(\"${1:name}\", ${2:expirationSeconds}, \"${3:scope}\")"
+    ]
+  },
+  "Cache WriteCache function": {
+    "prefix": "writeCache",
+    "body": [
+      "WriteCache(\"${1:name}\", ${2:value}, ${3:expirationSeconds}, \"${4:scope}\")"
+    ]
+  },
+  "Conversion BinaryToHex function": {
+    "prefix": "binaryToHex",
+    "body": [
+      "BinaryToHex(\"${1:arg}\")"
+    ]
+  },
+  "Conversion BinaryToUUID function": {
+    "prefix": "binaryToUUID",
+    "body": [
+      "BinaryToUUID(\"${1:arg}\")"
+    ]
+  },
+  "Conversion Bool function": {
+    "prefix": "bool",
+    "body": [
+      "Bool(\"${1:arg}\")"
+    ]
+  },
+  "Conversion Date function": {
+    "prefix": "date",
+    "body": [
+      "Date(\"${1:arg}\")"
+    ]
+  },
+  "Conversion Double function": {
+    "prefix": "double",
+    "body": [
+      "Double(\"${1:arg}\")"
+    ]
+  },
+  "Conversion Float function": {
+    "prefix": "float",
+    "body": [
+      "Float(\"${1:arg}\")"
+    ]
+  },
+  "Conversion HexToBinary function": {
+    "prefix": "hexToBinary",
+    "body": [
+      "HexToBinary(\"${1:arg}\")"
+    ]
+  },
+  "Conversion HexToString function": {
+    "prefix": "hexToString",
+    "body": [
+      "HexToString(\"${1:arg}\")"
+    ]
+  },
+  "Conversion Int function": {
+    "prefix": "int",
+    "body": [
+      "Int(\"${1:arg}\")"
+    ]
+  },
+  "Conversion Long function": {
+    "prefix": "long",
+    "body": [
+      "Long(\"${1:arg}\")"
+    ]
+  },
+  "Conversion String function": {
+    "prefix": "string",
+    "body": [
+      "String(\"${1:arg}\")"
+    ]
+  },
+  "Conversion StringToHex function": {
+    "prefix": "stringToHex",
+    "body": [
+      "StringToHex(\"${1:arg}\")"
+    ]
+  },
+  "Conversion UUIDToBinary function": {
+    "prefix": "uuidToBinary",
+    "body": [
+      "UUIDToBinary(\"${1:arg}\")"
+    ]
+  },
+  "Cryptographic AESDecryption function": {
+    "prefix": "aesDecryption",
+    "body": [
+      "AESDecryption(\"${1:encryptedText}\", \"${2:passphrase}\"${3:, <salt>, <keyLength>, <iterations>})"
+    ]
+  },
+  "Cryptographic AESEncryption function": {
+    "prefix": "aesEncryption",
+    "body": [
+      "AESEncryption(\"${1:plainText}\", \"${2:passphrase}\"${3:, <salt>, <keyLength>, <iterations>})"
+    ]
+  },
+  "Cryptographic Base64Decode function": {
+    "prefix": "base64Decode",
+    "body": [
+      "Base64Decode(\"${1:encryptedText}\")"
+    ]
+  },
+  "Cryptographic Base64Encode function": {
+    "prefix": "base64Encode",
+    "body": [
+      "Base64Encode(\"${1:arg}\")"
+    ]
+  },
+  "Cryptographic Base64EncodeFile function": {
+    "prefix": "base64EncodeFile",
+    "body": [
+      "Base64EncodeFile(\"${1:sourceId}\"${2:, <filename>})"
+    ]
+  },
+  "Cryptographic MD5 function": {
+    "prefix": "md5",
+    "body": [
+      "MD5(\"${1:arg}\")"
+    ]
+  },
+  "Cryptographic MD5AsTwoNumbers function": {
+    "prefix": "md5AsTwoNumbers",
+    "body": [
+      "MD5AsTwoNumbers(\"${1:arg}\")"
+    ]
+  },
+  "Cryptographic SHA256 function": {
+    "prefix": "sha256",
+    "body": [
+      "SHA256(\"${1:arg}\")"
+    ]
+  },
+  "Database CacheLookup function": {
+    "prefix": "cacheLookup",
+    "body": [
+      "CacheLookup(\"${1:databaseId}\", \"${2:sql}\")"
+    ]
+  },
+  "Database CallStoredProcedure function": {
+    "prefix": "callStoredProcedure",
+    "body": [
+      "CallStoredProcedure(\"${1:databaseId}\", \"${2:spName}\", \"${3:resultSet}\"${4:, <inputOutputVariable>,...})"
+    ]
+  },
+  "Database DBCloseConnection function": {
+    "prefix": "dbCloseConnection",
+    "body": [
+      "DBCloseConnection(\"${1:databaseId}\")"
+    ]
+  },
+  "Database DBExecute function": {
+    "prefix": "dbExecute",
+    "body": [
+      "DBExecute(\"${1:databaseId}\", \"${2:sql}\")"
+    ]
+  },
+  "Database DBLoad function": {
+    "prefix": "dbLoad",
+    "body": [
+      "DBLoad(\"${1:source}\", \"${2:target}\", \"${3:mode}\", \"${4:tablename}\", \"${5:columnNames}\"${6:, <columnKeynames>, <skipLines>, <dateFormat>, <datetimeFormat>})"
+    ]
+  },
+  "Database DBLookup function": {
+    "prefix": "dbLookup",
+    "body": [
+      "DBLookup(\"${1:databaseId}\", \"${2:sql}\")"
+    ]
+  },
+  "Database DBLookupAll function": {
+    "prefix": "dbLookupAll",
+    "body": [
+      "DBLookupAll(\"${1:databaseId}\", \"${2:sql}\")"
+    ]
+  },
+  "Database DBRollbackTransaction function": {
+    "prefix": "dbRollbackTransaction",
+    "body": [
+      "DBRollbackTransaction(\"${1:databaseId}\")"
+    ]
+  },
+  "Database DBWrite function": {
+    "prefix": "dbWrite",
+    "body": [
+      "DBWrite(\"${1:source}\", \"${2:target}\", \"${3:mode}\", \"${4:tablename}\", \"${5:columnNames}\"${6:, <columnKeynames>, <skipLines>, <dateFormat>, <datetimeFormat>})"
+    ]
+  },
+  "Database SQLEscape function": {
+    "prefix": "sqlEscape",
+    "body": [
+      "SQLEscape(\"${1:unescapedSQL}\"${2:, <escapeBackslash>})"
+    ]
+  },
+  "Database SetDBInsert function": {
+    "prefix": "setDbInsert",
+    "body": [
+      "SetDBInsert()"
+    ]
+  },
+  "Database SetDBUpdate function": {
+    "prefix": "setDbUpdate",
+    "body": [
+      "SetDBUpdate()"
+    ]
+  },
+  "Database Unmap function": {
+    "prefix": "unmap",
+    "body": [
+      "Unmap()"
+    ]
+  },
+  "DateAndTime CVTDate function": {
+    "prefix": "cvtDate",
+    "body": [
+      "CVTDate(\"${1:d}\", \"${2:inputFormat}\", \"${3:outputFormat}\")"
+    ]
+  },
+  "DateAndTime ConvertTimeZone function": {
+    "prefix": "convertTimeZone",
+    "body": [
+      "ConvertTimeZone(\"${1:d}\", \"${2:fromTZ}\", \"${3:toTZ}\"${4:, <is_european_format>, <ignoreDST>})"
+    ]
+  },
+  "DateAndTime DateAdd function": {
+    "prefix": "dateAdd",
+    "body": [
+      "DateAdd(\"${1:datePart}\", ${2:number}, \"${3:d}\")"
+    ]
+  },
+  "DateAndTime DayOfMonth function": {
+    "prefix": "dayOfMonth",
+    "body": [
+      "DayOfMonth(\"${1:d}\")"
+    ]
+  },
+  "DateAndTime DayOfWeek function": {
+    "prefix": "dayOfWeek",
+    "body": [
+      "DayOfWeek(\"${1:d}\")"
+    ]
+  },
+  "DateAndTime FormatDate function": {
+    "prefix": "formatDate",
+    "body": [
+      "FormatDate(\"${1:d}\", \"${2:format}\")"
+    ]
+  },
+  "DateAndTime GeneralDate function": {
+    "prefix": "generalDate",
+    "body": [
+      "GeneralDate(\"${1:d}\")"
+    ]
+  },
+  "DateAndTime GetUTCFormattedDate function": {
+    "prefix": "getUTCFormattedDate",
+    "body": [
+      "GetUTCFormattedDate(\"${1:d}\", \"${2:time_zone_id}\"${3:, <is_european_format>})"
+    ]
+  },
+  "DateAndTime GetUTCFormattedDateTime function": {
+    "prefix": "getUTCFormattedDateTime",
+    "body": [
+      "GetUTCFormattedDateTime(\"${1:d}\", \"${2:time_zone_id}\"${3:, <is_european_format>})"
+    ]
+  },
+  "DateAndTime LastDayOfMonth function": {
+    "prefix": "lastDayOfMonth",
+    "body": [
+      "LastDayOfMonth(\"${1:d}\")"
+    ]
+  },
+  "DateAndTime Now function": {
+    "prefix": "now",
+    "body": [
+      "Now()"
+    ]
+  },
+  "Debugging DebugBreak function": {
+    "prefix": "debugBreak",
+    "body": [
+      "DebugBreak(${1:<booleanExpression>})"
+    ]
+  },
+  "DictionaryAndArray AddToDict function": {
+    "prefix": "addToDict",
+    "body": [
+      "AddToDict(\"${1:dict}\", \"${2:key}\", \"${3:arg}\")"
+    ]
+  },
+  "DictionaryAndArray Array function": {
+    "prefix": "array",
+    "body": [
+      "Array()"
+    ]
+  },
+  "DictionaryAndArray CollectValues function": {
+    "prefix": "collectValues",
+    "body": [
+      "CollectValues(\"${1:dict}\", \"${2:names}\")"
+    ]
+  },
+  "Diff DiffAdd function": {
+    "prefix": "diffAdd",
+    "body": [
+      "DiffAdd()"
+    ]
+  },
+  "Diff InitializeDiff function": {
+    "prefix": "initializeDiff",
+    "body": [
+      "InitializeDiff(\"${1:diffId}\")"
+    ]
+  },
+  "Email SendEmail function": {
+    "prefix": "sendEmail",
+    "body": [
+      "SendEmail(\"${1:from}\", \"${2:to}\", \"${3:subject}\", \"${4:message}\"${5:, <smtpServers>, <account>, <accountPassword>, <cc>, <bcc>, <replyTo>, <useSSL>})"
+    ]
+  },
+  "Email SendSystemEmail function": {
+    "prefix": "sendSystemEmail",
+    "body": [
+      "SendSystemEmail(\"${1:to}\", \"${2:subject}\", \"${3:message}\")"
+    ]
+  },
+  "EnvironmentInformation GetEnvironmentID function": {
+    "prefix": "getEnvironmentId",
+    "body": [
+      "GetEnvironmentID()"
+    ]
+  },
+  "EnvironmentInformation GetEnvironmentName function": {
+    "prefix": "getEnvironmentName",
+    "body": [
+      "GetEnvironmentName()"
+    ]
+  },
+  "File ArchiveFile function": {
+    "prefix": "archiveFile",
+    "body": [
+      "ArchiveFile(\"${1:sourceId}\", \"${2:targetId}\"${3:, <deleteSource>})"
+    ]
+  },
+  "File DeleteFile function": {
+    "prefix": "deleteFile",
+    "body": [
+      "DeleteFile(\"${1:sourceId}\"${2:, <fileFilter>})"
+    ]
+  },
+  "File DeleteFiles function": {
+    "prefix": "deleteFiles",
+    "body": [
+      "DeleteFiles(\"${1:sourceId}\"${2:, <fileFilter>})"
+    ]
+  },
+  "File DirList function": {
+    "prefix": "dirList",
+    "body": [
+      "DirList(\"${1:sourceId}\"${2:, <path>, <fileFilter>})"
+    ]
+  },
+  "File FileList function": {
+    "prefix": "fileList",
+    "body": [
+      "FileList(\"${1:sourceId}\"${2:, <path>, <fileFilter>})"
+    ]
+  },
+  "File FlushAllFiles function": {
+    "prefix": "flushAllFiles",
+    "body": [
+      "FlushAllFiles(${1:<targetId>})"
+    ]
+  },
+  "File FlushFile function": {
+    "prefix": "flushFile",
+    "body": [
+      "FlushFile(\"${1:targetId}\"${2:, <filename>})"
+    ]
+  },
+  "File ReadFile function": {
+    "prefix": "readFile",
+    "body": [
+      "ReadFile(\"${1:sourceId}\"${2:, <fileFilter>})"
+    ]
+  },
+  "File WriteFile function": {
+    "prefix": "writeFile",
+    "body": [
+      "WriteFile(\"${1:targetId}\", \"${2:fileContents}\"${3:, <filename>})"
+    ]
+  },
+  "General ArgumentList function": {
+    "prefix": "argumentList",
+    "body": [
+      "ArgumentList(\"${1:var1}\"${2:, <var2>, ...})"
+    ]
+  },
+  "General AutoNumber function": {
+    "prefix": "autoNumber",
+    "body": [
+      "AutoNumber()"
+    ]
+  },
+  "General GUID function": {
+    "prefix": "guid",
+    "body": [
+      "GUID()"
+    ]
+  },
+  "General Get function": {
+    "prefix": "get",
+    "body": [
+      "Get(\"${1:name}\"${2:, <index1>, <index2>, ...})"
+    ]
+  },
+  "Math Pow function": {
+    "prefix": "pow",
+    "body": [
+      "Pow(${1:base}, ${2:exponent})"
+    ]
+  },
+  "Math Round function": {
+    "prefix": "round",
+    "body": [
+      "Round(${1:d}${2:, <numPlaces>})"
+    ]
+  },
+  "String Replace function": {
+    "prefix": "replace",
+    "body": [
+      "Replace(\"${1:str}\", \"${2:old}\", \"${3:new}\")"
+    ]
+  },
+  "String Trim function": {
+    "prefix": "trim",
+    "body": [
+      "Trim(\"${1:str}\")"
+    ]
+  },
+  "XML GetNodeValue function": {
+    "prefix": "getNodeValue",
+    "body": [
+      "GetNodeValue(\"${1:path}\")"
+    ]
+  },
+  "XML RunXSLT function": {
+    "prefix": "runXslt",
+    "body": [
+      "RunXSLT(\"${1:xslt}\", \"${2:xml1}\"${3:, <xml2>, ...})"
+    ]
+  },
+  "Instance Count function": {
+    "prefix": "count",
+    "body": [
+      "Count(\"${1:de}\")"
+    ]
+  },
+  "Instance CountSourceRecords function": {
+    "prefix": "countSourceRecords",
+    "body": [
+      "CountSourceRecords()"
+    ]
+  },
+  "Instance Exist function": {
+    "prefix": "exist",
+    "body": [
+      "Exist(\"${1:v}\", \"${2:de}\")"
+    ]
+  },
+  "Instance FindByPos function": {
+    "prefix": "findByPos",
+    "body": [
+      "FindByPos(\"${1:pos}\", \"${2:de}\")"
+    ]
+  },
+  "Instance FindValue function": {
+    "prefix": "findValue",
+    "body": [
+      "FindValue(\"${1:v}\", \"${2:de1}\", \"${3:de2}\")"
+    ]
+  },
+  "Instance GetInstance function": {
+    "prefix": "getInstance",
+    "body": [
+      "GetInstance()"
+    ]
+  },
+  "Instance Max function": {
+    "prefix": "max",
+    "body": [
+      "Max(\"${1:de}\")"
+    ]
+  },
+  "Instance Min function": {
+    "prefix": "min",
+    "body": [
+      "Min(\"${1:de}\")"
+    ]
+  },
+  "Instance ResolveOneOf function": {
+    "prefix": "resolveOneOf",
+    "body": [
+      "ResolveOneOf(\"${1:de}\")"
+    ]
+  },
+  "Instance SetInstances function": {
+    "prefix": "setInstances",
+    "body": [
+      "SetInstances(\"${1:nodeName}\", \"${2:de}\")"
+    ]
+  },
+  "Instance SortInstances function": {
+    "prefix": "sortInstances",
+    "body": [
+      "SortInstances(\"${1:nodeName}\", \"${2:sourceDataElements1}\"${3:, <sortOrder>, ..., <sourceDataElementsN>, <sortOrderN>})"
+    ]
+  },
+  "Instance Sum function": {
+    "prefix": "sum",
+    "body": [
+      "Sum(\"${1:de}\")"
+    ]
+  },
+  "Instance SumCSV function": {
+    "prefix": "sumCSV",
+    "body": [
+      "SumCSV(\"${1:de}\")"
+    ]
+  },
+  "Instance SumString function": {
+    "prefix": "sumString",
+    "body": [
+      "SumString(\"${1:de}\"${2:, <delimiter>, <omitLast>})"
+    ]
+  },
+  "JSON GetJSONString function": {
+    "prefix": "getJSONString",
+    "body": [
+      "GetJSONString(\"${1:json_string}\", \"${2:path}\")"
+    ]
+  },
+  "JSON Parser function": {
+    "prefix": "jsonParser",
+    "body": [
+      "JSONParser(\"${1:json_string}\")"
+    ]
+  },
+  "JSON Stringify function": {
+    "prefix": "jsonStringify",
+    "body": [
+      "JSONStringify(\"${1:json_object}\")"
+    ]
+  },
+  "Logging and Error GetLastError function": {
+    "prefix": "getLastError",
+    "body": [
+      "GetLastError()"
+    ]
+  },
+  "Logging and Error RaiseError function": {
+    "prefix": "raiseError",
+    "body": [
+      "RaiseError(\"${1:message}\")"
+    ]
+  },
+  "Logging and Error ResetLastError function": {
+    "prefix": "resetLastError",
+    "body": [
+      "ResetLastError()"
+    ]
+  },
+  "Logging and Error SetLastError function": {
+    "prefix": "setLastError",
+    "body": [
+      "SetLastError(\"${1:message}\")"
+    ]
+  },
+  "Logging and Error WriteToOperationLog function": {
+    "prefix": "writeToOperationLog",
+    "body": [
+      "WriteToOperationLog(\"${1:message}\")"
+    ]
+  },
+  "Logical Case function": {
+    "prefix": "case",
+    "body": [
+      "Case(\"${1:b1}\", \"${2:arg1}\"${3:, <b2>, <arg2>,... <bN>, <argN>})"
+    ]
+  },
+  "Logical Equal function": {
+    "prefix": "equal",
+    "body": [
+      "Equal(\"${1:array1}\", \"${2:array2}\")"
+    ]
+  },
+  "Logical If function": {
+    "prefix": "if",
+    "body": [
+      "If(\"${1:condition}\", \"${2:trueResult}\"${3:, <falseResult>})"
+    ]
+  },
+  "Logical While function": {
+    "prefix": "while",
+    "body": [
+      "While(\"${1:condition}\", \"${2:expression}\")"
+    ]
+  },
+  "General CancelOperation function": {
+    "prefix": "cancelOperation",
+    "body": [
+      "CancelOperation(${1:<operationInstanceGUID>})"
+    ]
+  },
+  "General CancelOperationChain function": {
+    "prefix": "cancelOperationChain",
+    "body": [
+      "CancelOperationChain(${1:<message>})"
+    ]
+  },
+  "General Eval function": {
+    "prefix": "eval",
+    "body": [
+      "Eval(${1:<expToEvaluate>}, ${2:<defaultResult>})"
+    ]
+  },
+  "General GetChunkDataElement function": {
+    "prefix": "getChunkDataElement",
+    "body": [
+      "GetChunkDataElement(${1:<name>})"
+    ]
+  },
+  "General GetHostByIP function": {
+    "prefix": "getHostByIP",
+    "body": [
+      "GetHostByIP(${1:<ipAddress>})"
+    ]
+  },
+  "General GetInputString function": {
+    "prefix": "getInputString",
+    "body": [
+      "GetInputString(${1:<arg>})"
+    ]
+  },
+  "General GetLastOperationRunStartTime function": {
+    "prefix": "getLastOperationRunStartTime",
+    "body": [
+      "GetLastOperationRunStartTime(${1:<operationId>})"
+    ]
+  },
+  "General GetName function": {
+    "prefix": "getName",
+    "body": [
+      "GetName(${1:<arg>})"
+    ]
+  },
+  "General GetOperationQueue function": {
+    "prefix": "getOperationQueue",
+    "body": [
+      "GetOperationQueue(${1:[<operationTag>]})"
+    ]
+  },
+  "General GetServerName function": {
+    "prefix": "getServerName",
+    "body": [
+      "GetServerName()"
+    ]
+  },
+  "General IfEmpty function": {
+    "prefix": "ifEmpty",
+    "body": [
+      "IfEmpty(${1:<arg>}, ${2:<default>})"
+    ]
+  },
+  "General IfNull function": {
+    "prefix": "ifNull",
+    "body": [
+      "IfNull(${1:<arg>}, ${2:<default>})"
+    ]
+  },
+  "General InList function": {
+    "prefix": "inList",
+    "body": [
+      "InList(${1:<x>}${2:[, <arg1>, ... <argN>]})"
+    ]
+  },
+  "General InitCounter function": {
+    "prefix": "initCounter",
+    "body": [
+      "InitCounter(${1:<counter>}, ${2:<initialValue>})"
+    ]
+  },
+  "General IsInteger function": {
+    "prefix": "isInteger",
+    "body": [
+      "IsInteger(${1:<x>})"
+    ]
+  },
+  "General IsNull function": {
+    "prefix": "isNull",
+    "body": [
+      "IsNull(${1:<x>})"
+    ]
+  },
+  "General IsValid function": {
+    "prefix": "isValid",
+    "body": [
+      "IsValid(${1:<x>})"
+    ]
+  },
+  "General Length function": {
+    "prefix": "length",
+    "body": [
+      "Length(${1:<x>})"
+    ]
+  },
+  "General Null function": {
+    "prefix": "null",
+    "body": [
+      "Null()"
+    ]
+  },
+  "General Random function": {
+    "prefix": "random",
+    "body": [
+      "Random(${1:<min>}, ${2:<max>})"
+    ]
+  },
+  "General RandomString function": {
+    "prefix": "randomString",
+    "body": [
+      "RandomString(${1:<len>}${2:[, <chars>]})"
+    ]
+  },
+  "General ReRunOperation function": {
+    "prefix": "reRunOperation",
+    "body": [
+      "ReRunOperation(${1:[<runSynchronously>]})"
+    ]
+  },
+  "General ReadArrayString function": {
+    "prefix": "readArrayString",
+    "body": [
+      "ReadArrayString(${1:<arrayString>}${2:[, <type>]})"
+    ]
+  },
+  "General RecordCount function": {
+    "prefix": "recordCount",
+    "body": [
+      "RecordCount()"
+    ]
+  },
+  "General RunOperation function": {
+    "prefix": "runOperation",
+    "body": [
+      "RunOperation(${1:<operationId>}${2:[, <runSynchronously>]})"
+    ]
+  },
+  "General RunPlugin function": {
+    "prefix": "runPlugin",
+    "body": [
+      "RunPlugin(${1:<pluginId>})"
+    ]
+  },
+  "General RunScript function": {
+    "prefix": "runScript",
+    "body": [
+      "RunScript(${1:<scriptId>}${2:[, <var1>, <var2>, ..., <varN>]})"
+    ]
+  },
+  "General Set function": {
+    "prefix": "set",
+    "body": [
+      "Set(${1:<name>}, ${2:<value>}${3:[, <index1>, <index2>, ..., <indexN>]})"
+    ]
+  },
+  "General SetChunkDataElement function": {
+    "prefix": "setChunkDataElement",
+    "body": [
+      "SetChunkDataElement(${1:<name>}, ${2:<value>})"
+    ]
+  },
+  "General Sleep function": {
+    "prefix": "sleep",
+    "body": [
+      "Sleep(${1:<seconds>})"
+    ]
+  },
+  "General SourceInstanceCount function": {
+    "prefix": "sourceInstanceCount",
+    "body": [
+      "SourceInstanceCount()"
+    ]
+  },
+  "General TargetInstanceCount function": {
+    "prefix": "targetInstanceCount",
+    "body": [
+      "TargetInstanceCount()"
+    ]
+  },
+  "General WaitForOperation function": {
+    "prefix": "waitForOperation",
+    "body": [
+      "WaitForOperation(${1:<operationId>}${2:[, <timeOutSec>, <pollIntervalSec>]})"
+    ]
+  }
+}

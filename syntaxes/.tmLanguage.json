@@ -1,0 +1,150 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "jitterbitscript",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.jitterbitscript",
+					"match": "\\b(if|while|for|return|break|continue)\\b"
+				},
+				{
+					"name": "keyword.operator.jitterbitscript",
+					"match": "\\b(=|==|!=|<|>|<=|>=|&&|\\|\\|)\\b"
+				},
+				{
+					"name": "keyword.function.jitterbitscript",
+					"match": "\\b(WriteToOperationLog|SetVariable|GetVariable|WriteToFile|ReadFromFile)\\b"
+				},
+				{
+					"name": "keyword.tag.jitterbitscript",
+					"match": "<[^>]+>"
+				},
+				{
+					"name": "keyword.cache.jitterbitscript",
+					"match": "\\b(ReadCache|WriteCache)\\b"
+				},
+				{
+					"name": "keyword.conversion.jitterbitscript",
+					"match": "\\b(BinaryToHex|BinaryToUUID|Bool|Date|Double|Float|HexToBinary|HexToString|Int|Long|String|StringToHex|UUIDToBinary)\\b"
+				},
+				{
+					"name": "keyword.cryptographic.jitterbitscript",
+					"match": "\\b(AESDecryption|AESEncryption|Base64Decode|Base64Encode|Base64EncodeFile|MD5|MD5AsTwoNumbers|SHA256)\\b"
+				},
+				{
+					"name": "keyword.database.jitterbitscript",
+					"match": "\\b(<SEQUENCE>|<SQLIDENTITY>|<UDF>|CacheLookup|CallStoredProcedure|DBCloseConnection|DBExecute|DBLoad|DBLookup|DBLookupAll|DBRollbackTransaction|DBWrite|SQLEscape|SetDBInsert|SetDBUpdate|Unmap)\\b"
+				},
+				{
+					"name": "keyword.dateandtime.jitterbitscript",
+					"match": "\\b(CVTDate|ConvertTimeZone|DateAdd|DayOfMonth|DayOfWeek|FormatDate|GeneralDate|GetUTCFormattedDate|GetUTCFormattedDateTime|LastDayOfMonth|LongDate|LongTime|MediumDate|MediumTime|MonthOfYear|Now|Now_|ShortDate|ShortTime)\\b"
+				},
+				{
+					"name": "keyword.debugging.jitterbitscript",
+					"match": "\\b(DebugBreak)\\b"
+				},
+				{
+					"name": "keyword.dictionaryandarray.jitterbitscript",
+					"match": "\\b(AddToDict|Array|CollectValues|Collection|Dict|GetKeys|GetSourceAttrNames|GetSourceElementNames|GetSourceInstanceArray|GetSourceInstanceElementArray|GetSourceInstanceElementMap|GetSourceInstanceMap|HasKey|Map|MapCache|ReduceDimension|RemoveKey|SortArray)\\b"
+				},
+				{
+					"name": "keyword.diff.jitterbitscript",
+					"match": "\\b(DiffAdd|DiffComplete|DiffDelete|DiffKeyList|DiffNode|DiffUpdate|InitializeDiff|OrderedDiffKeyList|ResetDiff|SetDiffChunkSize)\\b"
+				},
+				{
+					"name": "keyword.email.jitterbitscript",
+					"match": "\\b(SendEmail|SendEmailMessage|SendSystemEmail)\\b"
+				},
+				{
+					"name": "keyword.environmentinformation.jitterbitscript",
+					"match": "\\b(GetAgentGroupID|GetAgentGroupName|GetAgentID|GetAgentName|GetAgentVersionID|GetAgentVersionName|GetEnvironmentID|GetEnvironmentName|GetOrganizationID|GetOrganizationName)\\b"
+				},
+				{
+					"name": "keyword.file.jitterbitscript",
+					"match": "\\b(ArchiveFile|DeleteFile|DeleteFiles|DirList|FileList|FlushAllFiles|FlushFile|ReadFile|WriteFile)\\b"
+				},
+				{
+					"name": "keyword.general.jitterbitscript",
+					"match": "\\b(ArgumentList|AutoNumber|CancelOperation|CancelOperationChain|Eval|GUID|Get|GetChunkDataElement|GetHostByIP|GetInputString|GetLastOperationRunStartTime|GetName|GetOperationQueue|GetServerName|IfEmpty|IfNull|InList|InitCounter|IsInteger|IsNull|IsValid|Length|Null|Random|RandomString|ReRunOperation|ReadArrayString|RecordCount|RunOperation|RunPlugin|RunScript|Set|SetChunkDataElement|Sleep|SourceInstanceCount|TargetInstanceCount|WaitForOperation)\\b"
+				},
+				{
+					"name": "keyword.instance.jitterbitscript",
+					"match": "\\b(Count|CountSourceRecords|Exist|FindByPos|FindValue|GetInstance|Max|Min|ResolveOneOf|SetInstances|SortInstances|Sum|SumCSV|SumString)\\b"
+				},
+				{
+					"name": "keyword.json.jitterbitscript",
+					"match": "\\b(GetJSONString|JSONParser|JSONStringify)\\b"
+				},
+				{
+					"name": "keyword.jwt.jitterbitscript",
+					"match": "\\b(CreateJwtToken|DecodeJwtToken|GetJwtHeader|GetJwtPayload|GetJwtSignature|VerifyJwt|VerifyJwtClaims)\\b"
+				},
+				{
+					"name": "keyword.ldap.jitterbitscript",
+					"match": "\\b(ArrayToMultipleValues|LDAPAdd|LDAPConnect|LDAPDeleteEntry|LDAPExecute|LDAPRemove|LDAPRename|LDAPReplace|LDAPSearch)\\b"
+				},
+				{
+					"name": "keyword.logginganderror.jitterbitscript",
+					"match": "\\b(GetLastError|RaiseError|ResetLastError|SetLastError|WriteToOperationLog)\\b"
+				},
+				{
+					"name": "keyword.logical.jitterbitscript",
+					"match": "\\b(Case|Equal|If|While)\\b"
+				},
+				{
+					"name": "keyword.math.jitterbitscript",
+					"match": "\\b(Ceiling|Exp|Floor|Log|Log10|Mod|Pow|Round|RoundToInt|Sqrt)\\b"
+				},
+				{
+					"name": "keyword.netsuite.jitterbitscript",
+					"match": "\\b(NetSuiteGetSelectValue|NetSuiteGetServerTime|NetSuiteLogin)\\b"
+				},
+				{
+					"name": "keyword.salesforce.jitterbitscript",
+					"match": "\\b(GetSalesforceTimestamp|LoginToSalesforceAndGetTimeStamp|SalesforceLogin|SetSalesforceSession|SfCacheLookup|SfLookup|SfLookupAll|SfLookupAllToFile)\\b"
+				},
+				{
+					"name": "keyword.string.jitterbitscript",
+					"match": "\\b(CountSubString|DQuote|Format|Index|IsValidString|LPad|LPadChar|LTrim|LTrimChars|Left|Mid|ParseURL|Quote|RPad|RPadChar|RTrim|RTrimChars|RegExMatch|RegExReplace|Replace|Right|Split|SplitCSV|StringLength|ToLower|ToProper|ToUpper|Trim|TrimChars|Truncate|URLDecode|URLEncode)\\b"
+				},
+				{
+					"name": "keyword.textvalidation.jitterbitscript",
+					"match": "\\b(Validate)\\b"
+				},
+				{
+					"name": "keyword.xml.jitterbitscript",
+					"match": "\\b(Attribute|CreateNode|GetNodeName|GetNodeValue|GetXMLString|IsNil|RunXSLT|SelectNodeFromXMLAny|SelectNodes|SelectNodesFromXMLAny|SelectSingleNode)\\b"
+				},
+				{
+					"name": "keyword.stringvariable.jitterbitscript",
+					"match": "\".*?\"|'[^']*'"
+				},
+				{
+					"name": "keyword.numericvariable.jitterbitscript",
+					"match": "-?\\b\\d+(\\.\\d+)?\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.jitterbitscript",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.jitterbitscript",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.jitterbitscript"
+}

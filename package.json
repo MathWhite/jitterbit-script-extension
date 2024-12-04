@@ -1,0 +1,76 @@
+{
+  "name": "jitterbit-script",
+  "displayName": "Jitterbit Script",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "themes": [
+      {
+        "label": "Jitterbit Script Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/jitterbit-script-theme.json"
+      }
+    ],
+    "debuggers": [
+      {
+        "type": "jbs-debug",
+        "label": "JBS Debugger",
+        "program": "./out/debugAdapter.js",
+        "languages": [
+          "jitterbit-script"
+        ]
+      }
+    ],
+    "languages": [
+      {
+        "id": "jitterbit-script",
+        "aliases": [
+          "jitterbitscript"
+        ],
+        "extensions": [
+          ".jbs"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "jitterbit-script",
+        "scopeName": "source.jitterbitscript",
+        "path": "./syntaxes/.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "jitterbit-script",
+        "path": "./snippets/jitterbit-snippets.code-snippets"
+      }
+    ],
+    "commands": [
+      {
+        "command": "extension.createJBSFile",
+        "title": "Create JBS with Base Code"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.95.0"
+  },
+  "activationEvents": [
+    "onLanguage:jitterbit-script",
+    "onCommand:extension.createJBSFile"
+  ],
+  "scripts": {
+    "watch": "tsc -w && node --inspect-brk ./out/debugAdapter.js"
+  },
+  "dependencies": {
+    "vscode-debugadapter": "^1.51.0"
+  }
+}

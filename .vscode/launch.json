@@ -1,0 +1,23 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+	  {
+		"name": "Launch Extension",
+		"type": "extensionHost",
+		"request": "launch",
+		"args": [
+		  "--extensionDevelopmentPath=${workspaceFolder}"
+		]
+	  },
+	  {
+		"name": "Debug JBS Debugger",
+		"type": "node",
+		"request": "launch",
+		"skipFiles": [
+		  "<node_internals>/**"
+		],
+		"program": "${workspaceFolder}/out/debugAdapter.js"
+	  }
+	]
+  }
+  

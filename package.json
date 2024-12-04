@@ -1,9 +1,11 @@
 {
   "name": "jitterbit-script",
   "displayName": "Jitterbit Script",
-  "description": "",
+  "description": "Language Support for Jitterbit Script",
   "publisher": "bakebell",
-  "version": "0.0.1",
+  "icon": "images/icon.png",
+  "type": "module",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.95.0"
   },
@@ -15,7 +17,6 @@
     "themes": [
       {
         "label": "Jitterbit Script Theme",
-        "uiTheme": "vs-dark",
         "path": "./themes/jitterbit-script-theme.json"
       }
     ],
@@ -38,6 +39,10 @@
         "extensions": [
           ".jbs"
         ],
+        "icon": {
+          "light": "images/dev-icon.png",
+          "dark": "images/dev-icon.png"
+        },
         "configuration": "./language-configuration.json"
       }
     ],

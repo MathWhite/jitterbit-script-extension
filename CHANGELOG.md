@@ -1,9 +1,6 @@
-# Change Log
+# Change log
 
-All notable changes to the "jitterbit-script" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-
-- Initial release
+- 0.0.4: added .jbs icon
+- 0.0.3: added visual bug corrections
+- 0.0.2: added some bug corrections
+- 0.0.1: Initial version (beta)

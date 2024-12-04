@@ -8,15 +8,6 @@
 		"args": [
 		  "--extensionDevelopmentPath=${workspaceFolder}"
 		]
-	  },
-	  {
-		"name": "Debug JBS Debugger",
-		"type": "node",
-		"request": "launch",
-		"skipFiles": [
-		  "<node_internals>/**"
-		],
-		"program": "${workspaceFolder}/out/debugAdapter.js"
 	  }
 	]
   }

@@ -4,8 +4,8 @@
   "description": "Language Support for Jitterbit Script",
   "publisher": "bakebell",
   "icon": "images/icon.png",
-  "type": "module",
-  "version": "0.0.4",
+  "type": "commonjs",
+  "version": "0.1.5",
   "engines": {
     "vscode": "^1.95.0"
   },
@@ -13,13 +13,20 @@
     "Programming Languages"
   ],
   "main": "./src/extension.js",
+  "devDependencies": {
+    "@types/vscode": "^1.95.0"
+  },
+  "activationEvents": [
+    "onLanguage:jitterbit-script",
+    "onCommand:extension.createJBSFile"
+  ],
+  "scripts": {
+    "watch": "tsc -w && node --inspect-brk ./out/debugAdapter.js"
+  },
+  "dependencies": {
+    "vscode-debugadapter": "^1.51.0"
+  },
   "contributes": {
-    "themes": [
-      {
-        "label": "Jitterbit Script Theme",
-        "path": "./themes/jitterbit-script-theme.json"
-      }
-    ],
     "debuggers": [
       {
         "type": "jbs-debug",
@@ -50,7 +57,7 @@
       {
         "language": "jitterbit-script",
         "scopeName": "source.jitterbitscript",
-        "path": "./syntaxes/.tmLanguage.json"
+        "path": "./syntaxes/jitterbit-script.tmLanguage.json"
       }
     ],
     "snippets": [
@@ -64,19 +71,198 @@
         "command": "extension.createJBSFile",
         "title": "Create JBS with Base Code"
       }
-    ]
-  },
-  "devDependencies": {
-    "@types/vscode": "^1.95.0"
-  },
-  "activationEvents": [
-    "onLanguage:jitterbit-script",
-    "onCommand:extension.createJBSFile"
-  ],
-  "scripts": {
-    "watch": "tsc -w && node --inspect-brk ./out/debugAdapter.js"
-  },
-  "dependencies": {
-    "vscode-debugadapter": "^1.51.0"
+    ],
+    "configurationDefaults": {
+      "editor.tokenColorCustomizations": {
+        "textMateRules": [
+          {
+            "scope": "keyword.control.jitterbitscript",
+            "settings": {
+              "foreground": "#FFA500"
+            }
+          },
+          {
+            "scope": "keyword.operator.jitterbitscript",
+            "settings": {
+              "foreground": "#87CEEB"
+            }
+          },
+          {
+            "scope": "keyword.function.jitterbitscript",
+            "settings": {
+              "foreground": "#FF79C6"
+            }
+          },
+          {
+            "scope": "keyword.tag.jitterbitscript",
+            "settings": {
+              "foreground": "#71a6ad"
+            }
+          },
+          {
+            "scope": "keyword.cache.jitterbitscript",
+            "settings": {
+              "foreground": "#FF79C6"
+            }
+          },
+          {
+            "scope": "keyword.conversion.jitterbitscript",
+            "settings": {
+              "foreground": "#FF79C6"
+            }
+          },
+          {
+            "scope": "keyword.cryptographic.jitterbitscript",
+            "settings": {
+              "foreground": "#FF79C6"
+            }
+          },
+          {
+            "scope": "keyword.database.jitterbitscript",
+            "settings": {
+              "foreground": "#FF79C6"
+            }
+          },
+          {
+            "scope": "keyword.dateandtime.jitterbitscript",
+            "settings": {
+              "foreground": "#FF79C6"
+            }
+          },
+          {
+            "scope": "keyword.debugging.jitterbitscript",
+            "settings": {
+              "foreground": "#FF79C6"
+            }
+          },
+          {
+            "scope": "keyword.dictionaryandarray.jitterbitscript",
+            "settings": {
+              "foreground": "#FF79C6"
+            }
+          },
+          {
+            "scope": "keyword.diff.jitterbitscript",
+            "settings": {
+              "foreground": "#FF79C6"
+            }
+          },
+          {
+            "scope": "keyword.email.jitterbitscript",
+            "settings": {
+              "foreground": "#FF79C6"
+            }
+          },
+          {
+            "scope": "keyword.environmentinformation.jitterbitscript",
+            "settings": {
+              "foreground": "#FF79C6"
+            }
+          },
+          {
+            "scope": "keyword.file.jitterbitscript",
+            "settings": {
+              "foreground": "#FF79C6"
+            }
+          },
+          {
+            "scope": "keyword.general.jitterbitscript",
+            "settings": {
+              "foreground": "#FF79C6"
+            }
+          },
+          {
+            "scope": "keyword.instance.jitterbitscript",
+            "settings": {
+              "foreground": "#FF79C6"
+            }
+          },
+          {
+            "scope": "keyword.json.jitterbitscript",
+            "settings": {
+              "foreground": "#FF79C6"
+            }
+          },
+          {
+            "scope": "keyword.jwt.jitterbitscript",
+            "settings": {
+              "foreground": "#FF79C6"
+            }
+          },
+          {
+            "scope": "keyword.ldap.jitterbitscript",
+            "settings": {
+              "foreground": "#FF79C6"
+            }
+          },
+          {
+            "scope": "keyword.logginganderror.jitterbitscript",
+            "settings": {
+              "foreground": "#FF79C6"
+            }
+          },
+          {
+            "scope": "keyword.logical.jitterbitscript",
+            "settings": {
+              "foreground": "#FFA500"
+            }
+          },
+          {
+            "scope": "keyword.math.jitterbitscript",
+            "settings": {
+              "foreground": "#FF79C6"
+            }
+          },
+          {
+            "scope": "keyword.netsuite.jitterbitscript",
+            "settings": {
+              "foreground": "#FF79C6"
+            }
+          },
+          {
+            "scope": "keyword.salesforce.jitterbitscript",
+            "settings": {
+              "foreground": "#FF79C6"
+            }
+          },
+          {
+            "scope": "keyword.string.jitterbitscript",
+            "settings": {
+              "foreground": "#5ba5cf"
+            }
+          },
+          {
+            "scope": "keyword.textvalidation.jitterbitscript",
+            "settings": {
+              "foreground": "#FF79C6"
+            }
+          },
+          {
+            "scope": "keyword.xml.jitterbitscript",
+            "settings": {
+              "foreground": "#FF79C6"
+            }
+          },
+          {
+            "scope": "keyword.other.jitterbitscript",
+            "settings": {
+              "foreground": "#BD93F9"
+            }
+          },
+          {
+            "scope": "keyword.stringvariable.jitterbitscript",
+            "settings": {
+              "foreground": "#3CB371"
+            }
+          },
+          {
+            "scope": "keyword.numericvariable.jitterbitscript",
+            "settings": {
+              "foreground": "#98FB98"
+            }
+          }
+        ]
+      }
+    }
   }
 }

@@ -454,16 +454,196 @@
       "Round(${1:d}${2:, <numPlaces>})"
     ]
   },
+  "String CountSubString function": {
+    "prefix": "countsubstring",
+    "body": [
+      "CountSubString(\"${1:str}\", \"${2:subStr}\")"
+    ]
+  },
+  "String DQuote function": {
+    "prefix": "dquote",
+    "body": [
+      "DQuote(\"${1:str}\")"
+    ]
+  },
+  "String Format function": {
+    "prefix": "format",
+    "body": [
+      "Format(\"${1:formatStr}\", ${2:de})"
+    ]
+  },
+  "String Index function": {
+    "prefix": "index",
+    "body": [
+      "Index(\"${1:str}\", \"${2:subStr}\", ${3:n})"
+    ]
+  },
+  "String IsValidString function": {
+    "prefix": "isvalidstring",
+    "body": [
+      "IsValidString(\"${1:str}\")"
+    ]
+  },
+  "String LPad function": {
+    "prefix": "lpad",
+    "body": [
+      "LPad(\"${1:str}\", ${2:n})"
+    ]
+  },
+  "String LPadChar function": {
+    "prefix": "lpadchar",
+    "body": [
+      "LPadChar(\"${1:str}\", \"${2:padChar}\", ${3:n})"
+    ]
+  },
+  "String LTrim function": {
+    "prefix": "ltrim",
+    "body": [
+      "LTrim(\"${1:str}\")"
+    ]
+  },
+  "String LTrimChars function": {
+    "prefix": "ltrimchars",
+    "body": [
+      "LTrimChars(\"${1:str}\", \"${2:trimChars}\")"
+    ]
+  },
+  "String Left function": {
+    "prefix": "left",
+    "body": [
+      "Left(\"${1:str}\", ${2:n})"
+    ]
+  },
+  "String Mid function": {
+    "prefix": "mid",
+    "body": [
+      "Mid(\"${1:str}\", ${2:m}, ${3:n})"
+    ]
+  },
+  "String ParseURL function": {
+    "prefix": "parseurl",
+    "body": [
+      "ParseURL(\"${1:url}\")"
+    ]
+  },
+  "String Quote function": {
+    "prefix": "quote",
+    "body": [
+      "Quote(\"${1:str}\")"
+    ]
+  },
+  "String RPad function": {
+    "prefix": "rpad",
+    "body": [
+      "RPad(\"${1:str}\", ${2:n})"
+    ]
+  },
+  "String RPadChar function": {
+    "prefix": "rpadchar",
+    "body": [
+      "RPadChar(\"${1:str}\", \"${2:padChar}\", ${3:n})"
+    ]
+  },
+  "String RTrim function": {
+    "prefix": "rtrim",
+    "body": [
+      "RTrim(\"${1:str}\")"
+    ]
+  },
+  "String RTrimChars function": {
+    "prefix": "rtrimchars",
+    "body": [
+      "RTrimChars(\"${1:str}\", \"${2:trimChars}\")"
+    ]
+  },
+  "String RegExMatch function": {
+    "prefix": "regexmatch",
+    "body": [
+      "RegExMatch(\"${1:str}\", \"${2:exp}\", ${3:var1}, ... ${4:varN})"
+    ]
+  },
+  "String RegExReplace function": {
+    "prefix": "regexreplace",
+    "body": [
+      "RegExReplace(\"${1:str}\", \"${2:exp}\", \"${3:format}\")"
+    ]
+  },
   "String Replace function": {
     "prefix": "replace",
     "body": [
       "Replace(\"${1:str}\", \"${2:old}\", \"${3:new}\")"
     ]
   },
+  "String Right function": {
+    "prefix": "right",
+    "body": [
+      "Right(\"${1:str}\", ${2:n})"
+    ]
+  },
+  "String Split function": {
+    "prefix": "split",
+    "body": [
+      "Split(\"${1:str}\", \"${2:delimiter}\")"
+    ]
+  },
+  "String Split function with qualifier": {
+    "prefix": "splitqualifier",
+    "body": [
+      "Split(\"${1:str}\", \"${2:delimiter}\", \"${3:qualifier}\")"
+    ]
+  },
+  "String StringLength function": {
+    "prefix": "stringlength",
+    "body": [
+      "StringLength(\"${1:str}\")"
+    ]
+  },
+  "String ToLower function": {
+    "prefix": "tolower",
+    "body": [
+      "ToLower(\"${1:str}\")"
+    ]
+  },
+  "String ToProper function": {
+    "prefix": "toproper",
+    "body": [
+      "ToProper(\"${1:str}\")"
+    ]
+  },
+  "String ToUpper function": {
+    "prefix": "toupper",
+    "body": [
+      "ToUpper(\"${1:str}\")"
+    ]
+  },
   "String Trim function": {
     "prefix": "trim",
     "body": [
       "Trim(\"${1:str}\")"
+    ]
+  },
+  "String TrimChars function": {
+    "prefix": "trimchars",
+    "body": [
+      "TrimChars(\"${1:str}\", \"${2:trimChars}\")"
+    ]
+  },
+  "String Truncate function": {
+    "prefix": "truncate",
+    "body": [
+      "Truncate(\"${1:str}\", ${2:firstChars}, ${3:lastChars})"
+    ]
+  },
+  "String URLDecode function": {
+    "prefix": "urldecode",
+    "body": [
+      "URLDecode(\"${1:url}\", \"${2:paramName}\")"
+    ]
+  },
+  "String URLEncode function": {
+    "prefix": "urlencode",
+    "body": [
+      "URLEncode(\"${1:str}\", \"${2:encodingOption}\")"
     ]
   },
   "XML GetNodeValue function": {

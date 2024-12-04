@@ -5,7 +5,7 @@
   "publisher": "bakebell",
   "icon": "images/icon.png",
   "type": "commonjs",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "engines": {
     "vscode": "^1.95.0"
   },
@@ -24,16 +24,30 @@
     "watch": "tsc -w && node --inspect-brk ./out/debugAdapter.js"
   },
   "dependencies": {
-    "vscode-debugadapter": "^1.51.0"
+    "node": "^16.0.0",
+    "vscode-debugadapter": "^1.51.0",
+    "vscode-debugprotocol": "^1.51.0"
   },
   "contributes": {
     "debuggers": [
       {
-        "type": "jbs-debug",
+        "type": "jbs-debugger",
         "label": "JBS Debugger",
-        "program": "./out/debugAdapter.js",
-        "languages": [
-          "jitterbit-script"
+        "program": "./debugger/debugServer.js",  
+        "configurationSnippets": [
+          {
+            "label": "Launch Program",
+            "description": "Launch your program with JBS debugger",
+            "body": {
+              "type": "jbs-debugger",
+              "request": "launch",
+              "name": "Launch Program",
+              "program": "${workspaceFolder}/debugger/teste.jbs",
+              "breakpoints": [
+                { "line": 1 }
+              ]
+            }
+          }
         ]
       }
     ],

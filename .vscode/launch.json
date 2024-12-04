@@ -1,14 +1,24 @@
 {
 	"version": "0.2.0",
 	"configurations": [
-	  {
-		"name": "Launch Extension",
-		"type": "extensionHost",
-		"request": "launch",
-		"args": [
-		  "--extensionDevelopmentPath=${workspaceFolder}"
-		]
-	  }
+		{
+			"name": "Launch Extension",
+			"type": "extensionHost",
+			"request": "launch",
+			"args": [
+				"--extensionDevelopmentPath=${workspaceFolder}"
+			]
+		},
+		{
+			"type": "jbs-debugger",
+			"request": "launch",
+			"name": "Launch Program",
+			"program": "${workspaceFolder}/debugger/teste.jbs",
+			"breakpoints": [
+				{
+					"line": 1
+				}
+			]
+		}
 	]
-  }
-  
+}
